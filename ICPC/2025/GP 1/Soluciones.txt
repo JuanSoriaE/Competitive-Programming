@@ -1,0 +1,12 @@
+E: Done
+A: Done
+D: Done
+I: Done (DSU on tree)
+B: Done (Matriz spiral -> kadane)
+J: Done (Bitmask)
+G: Done (Teorema de Pick)
+K:
+H:
+C:
+F:
+L:
