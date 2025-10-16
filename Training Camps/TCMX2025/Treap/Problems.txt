@@ -1,0 +1,10 @@
+1. Algorithms Thread Treaps Contest:        https://codeforces.com/gym/102787
+    Shandom Ruffle                      Y
+    Pear TreapsSneetches and Speeches 3
+    The Grim Treaper
+    Pear TreapsSneetches and Speeches 2
+    Pear TreapsSneetches and Speeches 1
+    Trick or Treap                      Y
+2. SPOJ - Order statistic set:              https://www.spoj.com/problems/ORDERSET/en/              Y
+3. SPOJ - Can you answer these queries VI:  https://www.spoj.com/problems/GSS6/en/
+4. Yosupo - Range Reverse Range Sum:        https://judge.yosupo.jp/problem/range_reverse_range_sum Y

@@ -43,7 +43,7 @@ struct DSU {
         len[a] = (len[a] + la) % 2;
         return {p[a], len[a]};
     }
-    bool unit(int a, int b) {
+    bool unite(int a, int b) {
         auto [pa, la] = find(a);
         auto [pb, lb] = find(b);
         if (pa == pb) return 0;

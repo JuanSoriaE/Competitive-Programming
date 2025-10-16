@@ -15,6 +15,7 @@ using namespace std;
 // Basics
 
 #define MOD 1000000007
+
 // Binary Exponentiation | O(log(b))
 ll bin_pow(ll a, ll b) {
     ll res = 1;
@@ -179,17 +180,6 @@ vector<int> spiral(vector<vector<int>> &m) {
 }
 
 int main() {
-    // ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
-    vector<vector<int>> m = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    for (int i = 0; i < sz(m); i++) {
-        for (int j = 0; j < sz(m[0]); j++)
-        cout << m[i][j] << " ";
-        cout << endl;
-    }
-
-    for (auto i : spiral(m)) {
-        cout << i << " ";
-    }
-    cout << endl;
+    ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
     return 0;
 }

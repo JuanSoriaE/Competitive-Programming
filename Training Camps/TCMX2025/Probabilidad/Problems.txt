@@ -1,0 +1,6 @@
+1. Majority Element:        https://leetcode.com/problems/majority-element/ Y
+2. Ghd:                     https://codeforces.com/problemset/problem/364/D
+3. Baking Lucky Cakes:      https://codeforces.com/gym/102966/problem/B     Y
+4. Odd Mineral Resource:    https://codeforces.com/contest/1479/problem/D
+5. X-OR:                    https://codeforces.com/contest/1364/problem/E
+6. Lost Root:               https://codeforces.com/contest/1061/problem/F

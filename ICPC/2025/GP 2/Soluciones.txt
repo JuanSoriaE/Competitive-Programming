@@ -1,0 +1,12 @@
+A   easy
+B
+C   DP
+D   DSU
+E
+F
+G
+H   BFS
+I   easy
+J   Combinatoria
+K   easy
+L
