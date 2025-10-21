@@ -15,6 +15,7 @@ using namespace std;
 // Basics
 
 #define MOD 1000000007
+#define MAX_A 1
 
 // Binary Exponentiation | O(log(b))
 ll bin_pow(ll a, ll b) {
@@ -69,6 +70,43 @@ void compute_primes(int n) {
     }
 }
 
+// Factorization of number | O(sqrt(n))
+vector<pair<int, int>> factors(int n) {
+    vector<pair<int, int>> factors;
+    for (int p : primes) {
+        if (n == 1) break;
+        int e = 0;
+        while (n % p == 0) {
+            n /= p;
+            e++;
+        }
+        if (e) factors.push_back({p, e});
+    }
+    if (n != 1) factors.push_back({n, 1});
+    return factors;
+}
+
+// Smallest prime factor for every number from 1 to MAX_A | O(MAX_Alog(log(MAX_A))) | Limit 10^7
+int spf[MAX_A + 1];
+void compute_spf() {
+    iota(spf, spf + MAX_A + 1, 0);
+    for (int i = 2; i * i <= MAX_A; i++)
+    if (spf[i] == i)
+        for (int j = i * i; j <= MAX_A; j += i)
+        if (spf[j] == j) spf[j] = i;
+}
+
+// Factorization of number | O(log(n))
+vector<pair<int, int>> factors(int n) {
+    vector<pair<int, int>> factors;
+    while (n > 1) {
+        int p = spf[n], e = 0;
+        while (n % p == 0) n /= p, e++;
+        factors.push_back({p, e});
+    }
+    return factors;
+}
+
 // Number of primes smaller or equal to n | O((n^(3/4))/ln(n)) | Limit 10^10
 lli pi_0(lli N){
 	int m = sqrt(N);
@@ -94,22 +132,6 @@ lli pi_0(lli N){
 		}
 	}
 	return at(N);
-}
-
-// Factorization of number | O(sqrt(n)) if n is prime
-vector<pair<int, int>> factors(int n) {
-    vector<pair<int, int>> factors;
-    for (int p : primes) {
-        if (n == 1) break;
-        int e = 0;
-        while (n % p == 0) {
-            n /= p;
-            e++;
-        }
-        if (e) factors.push_back({p, e});
-    }
-    if (n != 1) factors.push_back({n, 1});
-    return factors;
 }
 
 // Linear Algebra
