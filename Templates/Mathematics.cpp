@@ -86,7 +86,7 @@ vector<pair<int, int>> factors(int n) {
     return factors;
 }
 
-// Smallest prime factor for every number from 1 to MAX_A | O(MAX_Alog(log(MAX_A))) | Limit 10^7
+// Smallest prime factor for every number from 1 to MAX_A | O(MAX_A*log(log(MAX_A))) | Limit 10^7
 int spf[MAX_A + 1];
 void compute_spf() {
     iota(spf, spf + MAX_A + 1, 0);

@@ -36,7 +36,7 @@ ll knapsack() {
     return dp[W];
 }
 
-int qty[MAX_N]; // k[i] instances of item i
+int qty[MAX_N]; // qty[i] instances of item i
 
 // Multiple Knapsack | O(sum(k[i])W)
 ll knapsack() {
