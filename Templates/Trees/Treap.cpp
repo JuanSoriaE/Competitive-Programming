@@ -223,6 +223,40 @@ Node* get_parent(Node *t) {
     return t;
 }
 
+// Updates (lazy update)
+
+// Reverse range
+void push(Node *t) {
+    if (!t || !t->rev) return;
+
+    // Modify value of current node t and propagate to children
+    swap(t->l, t->r);
+    t->rev = 0;
+
+    if (t->l) t->l->rev ^= 1;
+    if (t->r) t->r->rev ^= 1;
+}
+
+// Add in range
+void update(Node *t) {
+    t->size = get_size(t->l) + get_size(t->r) + 1;
+
+    t->sum = t->val + t->to_prop;
+    if (t->l) t->sum += t->l->sum + t->l->to_prop * get_size(t->l);
+    if (t->r) t->sum += t->r->sum + t->r->to_prop * get_size(t->r);
+}
+
+void push(Node *t) {
+    if (!t || t->to_prop == 0) return;
+
+    if (t->l) t->l->to_prop += t->to_prop;
+    if (t->r) t->r->to_prop += t->to_prop;
+
+    t->val += t->to_prop;
+    t->to_prop = 0;
+    update(t);
+}
+
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
     return 0;
