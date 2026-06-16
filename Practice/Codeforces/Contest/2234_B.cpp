@@ -9,7 +9,18 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
+void solve() {
+    ll n; cin >> n;
+    if (n == 10) {
+        cout << "-1\n";
+        return;
+    }
+
+    if (n % 12 == 10)
+        cout << "22 " << (n - 22) << '\n';
+    else
+        cout << (n % 12) << " " << (n - (n % 12)) << '\n';
+}
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);

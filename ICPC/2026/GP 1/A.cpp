@@ -9,11 +9,23 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
-
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
-    int t; cin >> t;
-    while (t--) solve();
+    int n, m; cin >> n >> m;
+
+    int total = 0;
+    while (n--) {
+        int a; cin >> a;
+        total += a;
+    }
+    int paid = 0;
+    while (m--) {
+        int a; cin >> a;
+        paid += a;
+    }
+
+    total = total + ceil(total, 10);
+    cout << (paid >= total ? "YES" : "NO") << '\n';
+
     return 0;
 }

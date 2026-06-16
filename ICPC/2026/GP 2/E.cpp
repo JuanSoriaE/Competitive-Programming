@@ -9,11 +9,20 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
-
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
-    int t; cin >> t;
-    while (t--) solve();
+    string s; cin >> s;
+    string ans = "";
+
+    for (int i = 0; i  < sz(s);)
+    if (s.substr(i, 6) == "mesero") {
+        ans += "taquero";
+        i += 6;
+    } else {
+        ans += s[i++];
+    }
+
+    cout << ans << '\n';
+
     return 0;
 }

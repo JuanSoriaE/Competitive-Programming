@@ -9,7 +9,24 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
+#define MAX_N 100
+
+int a[MAX_N];
+
+void solve() {
+    int n; cin >> n;
+    for (int i = 0; i < n; i++) cin >> a[i];
+    sort(a, a + n, greater<int>());
+
+    bool valid = true;
+    for (int i = 2; i < n; i++)
+        valid &= a[i] == a[i - 2] % a[i - 1];
+
+    if (valid)
+        cout << a[0] << " " << a[1] << '\n';
+    else
+        cout << "-1\n";
+}
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);

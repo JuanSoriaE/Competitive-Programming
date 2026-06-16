@@ -25,11 +25,8 @@ void compute_bases() {
 int decomposition_cat[MAX_AT];
 void decompose_cat(int n) {
     for (int i = MAX_AT - 1; i >= 0; i--) {
-        int p = 0;
-        while (base_cat[i] <= n) {
-            n -= base_cat[i];
-            p++;
-        }
+        int p = n / base_cat[i];
+        n %= base_cat[i];
 
         decomposition_cat[i] = p;
     }
@@ -38,11 +35,8 @@ void decompose_cat(int n) {
 int decomposition_gata[MAX_AT];
 void decompose_gata(int n) {
     for (int i = MAX_AT - 1; i >= 0; i--) {
-        int p = 0;
-        while (base_gata[i] <= n) {
-            n -= base_gata[i];
-            p++;
-        }
+        int p = n / base_gata[i];
+        n %= base_gata[i];
 
         decomposition_gata[i] = p;
     }
