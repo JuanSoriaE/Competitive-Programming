@@ -9,7 +9,18 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
+void solve() {
+    int n; cin >> n;
+
+    ll sum = 0, ans = LLONG_MAX;
+    for (int i = 1; i <= n; i++) {
+        int aux; cin >> aux;
+        sum += aux;
+        ans = min(sum / i, ans);
+        cout << ans << ' ';
+    }
+    cout << '\n';
+}
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);

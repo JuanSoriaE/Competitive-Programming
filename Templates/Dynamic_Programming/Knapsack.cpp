@@ -11,8 +11,8 @@ using namespace std;
 #define uset unordered_set
 #define umap unordered_map
 
-#define MAX_N 100
-#define MAX_W 100000
+constexpr int MAX_N = 100;
+constexpr int MAX_W = 100000;
 
 int n, W;
 int weight[MAX_N], val[MAX_N];

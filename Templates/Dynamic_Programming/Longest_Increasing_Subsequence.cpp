@@ -11,7 +11,7 @@ using namespace std;
 #define uset unordered_set
 #define umap unordered_map
 
-#define MAX_N 100
+constexpr int MAX_N = 100;
 
 int n;
 int a[MAX_N], dp[MAX_N];

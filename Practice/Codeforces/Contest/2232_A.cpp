@@ -9,7 +9,22 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
+void solve() {
+    int n; cin >> n;
+    map<int, int> mp;
+    for (int i = 0; i < n; i++) {
+        int aux; cin >> aux;
+        mp[aux]++;
+    }
+
+    int ans = INT_MAX, left = 0, right;
+    for (auto &[k, v] : mp) {
+        right = n - left - v;
+        ans = min(ans, max(left, right));
+        left += v;
+    }
+    cout << ans << '\n';
+}
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);

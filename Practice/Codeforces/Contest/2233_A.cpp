@@ -9,7 +9,13 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
+void solve() {
+    int n, x, y, z; cin >> n >> x >> y >> z;
+    int op1 = ceil(n, (x + y));
+    int op2 = n > z * x ? z + ceil((n - z * x), (x + 10 * y)) : INT_MAX;
+
+    cout << min(op1, op2) << '\n';
+}
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);

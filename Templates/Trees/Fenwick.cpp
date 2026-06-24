@@ -9,10 +9,12 @@ using namespace std;
 #define ll long long
 #define ld long double
 
+
+// Fenwick Tree
 template<typename T>
 struct FenwickTree {
-    vector<T> bit;
     int n;
+    vector<T> bit;
 
     FenwickTree(const int &n) : n(n), bit(n) {}
     FenwickTree(const vector<T> &a) : n(sz(a)), bit(n) {
@@ -38,10 +40,11 @@ struct FenwickTree {
     }
 };
 
+// FenwickTree 2D
 template<typename T>
 struct FenwickTree2D {
-    vector<vector<T>> bit;
     int n, m;
+    vector<vector<T>> bit;
 
     FenwickTree2D(const int &n, const int &m) : n(n), m(m), bit(n, vector<T>(m)) {}
 

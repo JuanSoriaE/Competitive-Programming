@@ -9,11 +9,21 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-void solve() {}
+#define MAX_N 100000
 
 int main() {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
-    int t; cin >> t;
-    while (t--) solve();
+    int n; cin >> n;
+    ll dp_neg = 0, dp_pos = 0;
+    while (n--) {
+        int a; cin >> a;
+        if (a > 0)
+            dp_pos = max(dp_pos, dp_neg + a);
+        else
+            dp_neg = max(dp_neg, dp_pos + a);
+    }
+
+    cout << max(dp_pos, dp_neg) << '\n';
+
     return 0;
 }

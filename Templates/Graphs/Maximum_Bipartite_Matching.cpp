@@ -11,8 +11,8 @@ using namespace std;
 #define uset unordered_set
 #define umap unordered_map
 
-#define MAX_N 10000
-#define MAX_M 10000
+constexpr int MAX_N = 10000;
+constexpr int MAX_M = 10000;
 
 int n, m; // Number of nodes at left (1...n) and right (1...m) respectively
 vector<vector<int>> adj; // From left to right nodes

@@ -11,8 +11,6 @@ using namespace std;
 #define uset unordered_set
 #define umap unordered_map
 
-// Disjoint Set Union
-
 // DSU with path compression
 struct DSU {
     vector<int> p, size;

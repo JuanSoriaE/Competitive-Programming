@@ -11,8 +11,6 @@ using namespace std;
 #define uset unordered_set
 #define umap unordered_map
 
-// Treap
-
 // Basic Treap
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 

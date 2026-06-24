@@ -9,8 +9,6 @@ using namespace std;
 #define ll long long
 #define ld long double
 
-// Persistent Disjoint Set Union
-
 // Persistent DSU with Rollback
 struct DSU {
     vector<int> p, size;

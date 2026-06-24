@@ -12,10 +12,10 @@ using namespace std;
 #define uset unordered_set
 #define umap unordered_map
 
-// Basics
+constexpr int MOD = 1000000007;
+constexpr int MAX_A = 1;
 
-#define MOD 1000000007
-#define MAX_A 1
+// Basics
 
 // Binary Exponentiation | O(log(b))
 ll bin_pow(ll a, ll b) {

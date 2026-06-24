@@ -68,7 +68,7 @@ struct Sqrt {
 };
 
 // Mo's Algorithm
-const int BLOCK_SIZE = 317; // sqrt(10^5)
+constexpr int BLOCK_SIZE = 317; // sqrt(10^5)
 struct Query {
     int l, r, i;
 
