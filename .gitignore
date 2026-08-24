@@ -2,4 +2,6 @@
 *.out
 test.cpp
 check.cpp
+temp.cpp
+in.txt
 EulerProject
