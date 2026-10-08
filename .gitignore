@@ -1,7 +1,10 @@
 *.exe
 *.out
+*.in
+*.pdf
 test.cpp
 check.cpp
 temp.cpp
 in.txt
 EulerProject
+users.txt

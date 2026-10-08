@@ -19,10 +19,8 @@ vector<int> order;
 
 void dfs(int u) {
     if (vst[u]) return;
-
     vst[u] = 1;
     for (int v : adj[u]) dfs(v);
-
     order.push_back(u);
 }
 
@@ -30,7 +28,6 @@ void topological_sort() {
     vst.resize(n, false);
     for (int u = 0; u < n; u++)
         dfs(u);
-
     reverse(all(order));
 }
 
